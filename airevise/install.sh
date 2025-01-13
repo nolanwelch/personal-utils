@@ -3,8 +3,10 @@
 CFG_FILE=~/.bashrc
 PACKAGE_ALIAS='alias airevise="python -m airevise"'
 
-python -m pip install -r requirements.txt
-python -m pip install .
+cd .. || exit 1
+
+python -m pip install -r airevise/requirements.txt
+python -m pip install airevise/
 
 if ! grep -q "$PACKAGE_ALIAS" "$CFG_FILE"; then
     echo "$PACKAGE_ALIAS" >>"$CFG_FILE"
