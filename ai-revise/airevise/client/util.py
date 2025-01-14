@@ -36,11 +36,8 @@ class RevisionClient:
                     {
                         "role": "system",
                         "content": "Revise the message below to improve tone, clarity, professionalism, and any other relevant features."
-                        + " If you are unable to safely revise the message, you may indicate that in your response using can_answer=false.",
-                    },
-                    {
-                        "role": "system",
-                        "content": f"The message below is a(n) {msg_type}",
+                        + " If you are unable to safely revise the message, you may indicate that in your response using can_answer=false."
+                        + f" Additionally, format your output as a(n) {msg_type}.",
                     },
                     {"role": "user", "content": user_text},
                 ],

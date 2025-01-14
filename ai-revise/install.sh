@@ -3,8 +3,6 @@
 CFG_FILE=~/.bashrc
 PACKAGE_ALIAS='alias airevise="python -m airevise"'
 
-cd .. || exit 1
-
 python -m pip install -r airevise/requirements.txt
 python -m pip install airevise/
 
